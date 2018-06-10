@@ -3,21 +3,27 @@
     <head>
             <link rel="stylesheet" href="style.css">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="validate.js"></script>
     </head>
 <body>
-
-<form>
+<header><a href="first-page.html">Home</a></header>
+<form class = "form-class" id = "userForm" onsubmit="return validateForm()">
+  <div id= "errorDiv" class= "message error">
+    Fields cannot be empty
+  </div>
+  <div id= "infoDiv" class= "message info">
+      Form is validated successfully
+    </div>
   <fieldset>
     <legend>Personal information:</legend>
     First name:<br>
-    <input class ="input-class" type="text" name="firstname" value="Mickey" required>
+    <input id = "firstName" class ="input-class" type="text" name="firstname" value="Mickey">
     <br>
     Last name:<br>
-    <input class ="input-class" name="lastname" value="Mouse" required>
+    <input id = "lastName" class ="input-class" name="lastname" value="Mouse">
     <br><br>
     <input type="submit" value="Submit">
   </fieldset>
 </form>
-<footer><a href="first-page.html">home</a></footer>
 </body>
 </html>
